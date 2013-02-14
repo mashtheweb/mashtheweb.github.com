@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: Welcome to Mash The Web!
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
