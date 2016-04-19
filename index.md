@@ -9,9 +9,15 @@ Welcome to my simple web blog constructed by Github. So far, it will only some s
 
 ## Some sample hack day stuff I have done this year
 
+<p>
 Cultivate London (to be continued) See http://cultivatelondongfn.tumblr.com
+</p>
+<p>
 eBay Hack Day (to be continued)
-
+</p>
+<p>
+Great War Essex. See <a href="mashtheweb.github.io/greatwaressex.html">here</a>
+</p>
 ## Some Posts
 
 This blog contains some posts as a starter for some blog data.
