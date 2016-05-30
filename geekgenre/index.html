@@ -1,0 +1,668 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Geek Genre Playground Page</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Storage ui kit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<link href='//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'></head>
+<script type="text/javascript" src="js/Chart.js"></script>
+<!----Calender -------->
+  <link rel="stylesheet" href="css/clndr.css" type="text/css" />
+  <script src="js/underscore-min.js"></script>
+  <script src= "js/moment-2.2.1.js"></script>
+  <script src="js/clndr.js"></script>
+  <script src="js/site.js"></script>
+<!----End Calender -------->
+<!-- start equalizer -->		  
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-ui.min.js"></script>
+<script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
+<script>
+$(function() {
+	 
+	    $( "#eq > span" ).each(function() {	   
+	      var value = parseInt( $( this ).text(), 10 );
+	      $( this ).empty().slider({
+	        value: value,
+	        range: "min",
+	        animate: true,
+	        orientation: "vertical"
+	      });
+	    });
+	  });
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!--google.load("feeds", "1");
+	
+	function initialise() {
+	    var feed = new google.feeds.Feed("http://nerdist.com/feed");
+		feed.load(function(result) {
+		console.log(result);
+		    if (!result.error) {
+			    var container = document.getElementById("feed");
+				for (var i = 0; i < result.feed.entries.length; i++) {
+				    var entry = result.feed.entries[i];
+                    var div = document.createElement("div");
+                    div.appendChild(document.createTextNode(entry.title));
+                    container.appendChild(div);					
+				}
+			}
+		});
+		google.setOnLoadCallback(initialise);
+	}-->
+	
+<script type="text/javascript">
+		(function($) {
+		var url = 'https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&num=200&q=http://nerdist.com/feed/';
+
+		$.ajax({
+		   type: 'GET',
+			url: url,
+			async: false,
+			jsonpCallback: 'callback',
+			contentType: "application/json",
+			dataType: 'jsonp',
+			success: function(json) {
+			   
+			   console.log(json.responseData.feed);
+			   
+			   var container = document.getElementById("feed");
+			   for (var i = 0; i < json.responseData.feed.entries.length; i++) {
+				   var entry = json.responseData.feed.entries[i];
+				   var div = document.createElement("div");
+				   var ptitle = document.createElement("p");
+				   var ppostedby = document.createElement("p");
+				   var plink = document.createElement("p");
+				   ptitle.setAttribute('class', 'title-link');
+				   ptitle.appendChild(document.createTextNode(entry.title));
+				   ppostedby.setAttribute('class', 'beaut-link');
+				   ppostedby.appendChild(document.createTextNode('posted by '));
+				   ppostedby.appendChild(document.createTextNode(entry.author));
+				   ppostedby.appendChild(document.createTextNode(' on '));
+				   ppostedby.appendChild(document.createTextNode(entry.publishedDate));
+				   plink.setAttribute('class', 'postedby-link');
+				   plink.appendChild(document.createTextNode(entry.link));
+				   div.appendChild(ptitle);
+				   div.appendChild(ppostedby);
+				   div.appendChild(plink);
+				   container.appendChild(div);	
+			   }
+			},
+			error: function(e) {
+			console.log(e.message);
+			}
+		});
+		
+		var url2 = 'https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&num=200&q=http://www.denofgeek.com/uk/feeds/all/';
+
+		$.ajax({
+		   type: 'GET',
+			url: url2,
+			async: false,
+			jsonpCallback: 'callback',
+			contentType: "application/json",
+			dataType: 'jsonp',
+			success: function(json1) {
+			   
+			   console.log(json1.responseData.feed);
+			   
+			   var container1 = document.getElementById("feed1");
+			   for (var i = 0; i < json1.responseData.feed.entries.length; i++) {
+				   var entry = json1.responseData.feed.entries[i];
+				   var div = document.createElement("div");
+				   var ptitle = document.createElement("p");
+				   var ppostedby = document.createElement("p");
+				   var plink = document.createElement("p");
+				   ptitle.setAttribute('class', 'title-link');
+				   ptitle.appendChild(document.createTextNode(entry.title));
+				   ppostedby.setAttribute('class', 'beaut-link');
+				   ppostedby.appendChild(document.createTextNode('posted by '));
+				   ppostedby.appendChild(document.createTextNode(entry.author));
+				   ppostedby.appendChild(document.createTextNode(' on '));
+				   ppostedby.appendChild(document.createTextNode(entry.publishedDate));
+				   plink.setAttribute('class', 'postedby-link');
+				   plink.appendChild(document.createTextNode(entry.link));
+				   div.appendChild(ptitle);
+				   div.appendChild(ppostedby);
+				   div.appendChild(plink);
+				   container1.appendChild(div);	
+			   }
+			},
+			error: function(e1) {
+			console.log(e1.message);
+			}
+		});
+
+		})(jQuery);
+</script>
+<script>
+(function($){
+	$.fn.percentPie = function(options){
+
+		var settings = $.extend({
+			width: 100,
+			trackColor: "EEEEEE",
+			barColor: "777777",
+			barWeight: 30,
+			startPercent: 0,
+			endPercent: 1,
+			fps: 60
+		}, options);
+
+		this.css({
+			width: settings.width,
+			height: settings.width
+		});
+
+		var	that = this,
+			hoverPolice = false,
+			canvasWidth = settings.width,
+			canvasHeight = canvasWidth,
+			id = $('canvas').length,
+			canvasElement = $('<canvas id="'+ id +'" width="' + canvasWidth + '" height="' + canvasHeight + '"></canvas>'),
+			canvas = canvasElement.get(0).getContext("2d"),
+			centerX = canvasWidth/2,
+			centerY = canvasHeight/2,
+			radius = settings.width/2 - settings.barWeight/2;
+			counterClockwise = false,
+			fps = 1000 / settings.fps,
+			update = .01;
+			this.angle = settings.startPercent;
+
+		this.drawArc = function(startAngle, percentFilled, color){
+			var drawingArc = true;
+			canvas.beginPath();
+			canvas.arc(centerX, centerY, radius, (Math.PI/180)*(startAngle * 360 - 90), (Math.PI/180)*(percentFilled * 360 - 90), counterClockwise);
+			canvas.strokeStyle = color;
+			canvas.lineWidth = settings.barWeight;
+			canvas.stroke();
+			drawingArc = false;
+		}
+
+		this.fillChart = function(stop){
+			var loop = setInterval(function(){
+				hoverPolice = true;
+				canvas.clearRect(0, 0, canvasWidth, canvasHeight);
+
+				that.drawArc(0, 360, settings.trackColor);
+				that.angle += update;
+				that.drawArc(settings.startPercent, that.angle, settings.barColor);
+
+				if(that.angle > stop){
+					clearInterval(loop);
+					hoverPolice = false;
+				}
+			}, fps);
+		}
+
+		this.mouseover(function(){
+			if(hoverPolice == false){
+				that.angle = settings.startPercent;
+				that.fillChart(settings.endPercent);
+			}
+		});
+
+		this.fillChart(settings.endPercent);
+		this.append(canvasElement);
+		return this;
+	}
+}(jQuery));
+
+$(document).ready(function() {
+
+	$('.google').percentPie({
+		width: 100,
+		trackColor: "444444",
+		barColor: "71CF97",
+		barWeight: 20,
+		endPercent: .9,
+		fps: 60
+	});
+  
+  $('.moz').percentPie({
+		width: 100,
+		trackColor: "444444",
+		barColor: "2EB0E2",
+		barWeight: 20,
+		endPercent: .75,
+		fps: 60
+	});
+  
+  $('.safari').percentPie({
+		width: 100,
+		trackColor: "444444",
+		barColor: "#e51937",
+		barWeight: 20,
+		endPercent: .5,
+		fps: 60
+	});
+    
+});
+</script>
+<!----video -------->	
+<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function () {
+			$(this).jPlayer("setMedia", {
+				title: "Big Buck Bunny",
+				m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+				poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+			});
+		},
+		swfPath: "../../dist/jplayer",
+		supplied: "m4v",
+		size: {
+			width: "475px",
+			height: "250px",
+			cssClass: "jp-video-360p"
+		},
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true
+	});
+});
+//]]>
+</script>
+<!----//video -------->
+<body>
+	<!---header--->
+	<div class="header-section">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html" class="logo-content"><h1>Geek Genre Playground</h1></a>
+			</div>
+		</div>
+	</div>
+	<!---header--->
+		<!---content--->
+			<div class="header-bottom">
+				<div class="container">
+				<div class="main-grids">
+						<div class="col-md-6 main-grid">
+							<div class="beautiful">
+								<div class="news">
+									<div class="new1">
+										<h4>Nerdist Blog Feed</h4>
+									</div>
+									<div class="new2">
+										<a href="#">view all</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<img src="images/nerdistpodcast.png" class="img-responsive" alt="">
+									
+								<div class="beaut-bottoms">
+									<!--<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 9752</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 125</p>
+									</div>-->
+									<div id="feed">
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 main-grid">
+							<div class="beautiful">
+								<div class="news">
+									<div class="new1">
+										<h4>Den Of Geek Blog Feed</h4>
+									</div>
+									<div class="new2">
+										<a href="#">view all</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<img src="images/denofgeek.png" class="img-responsive" alt="">
+									
+								<div class="beaut-bottoms">
+									<!--<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 9752</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 125</p>
+									</div>-->
+									<div id="feed1">
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+				<!--
+					<div class="main-grids">
+						<div class="col-md-6 main-grid">
+							<div class="beautiful">
+								<img src="images/p1.jpg" class="img-responsive" alt="">
+								<h3>beautiful and inspiring workspaces</h3>
+									<p class="beaut-link">posted by <a href="#">Gisele Muller</a> on <span> Feb 09 ,2015 </span></p>
+									<p class="beaut-link1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage. </p>
+									<a href="#" class="button">read more</a>
+								<div class="beaut-bottoms">
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 9752</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 125</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 103</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-download" aria-hidden="true"></span> 95</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-md-6 main-grid">
+							<div class="beautiful">
+								<img src="images/p1.jpg" class="img-responsive" alt="">
+								<h3>beautiful and inspiring workspaces</h3>
+									<p class="beaut-link">posted by <a href="#">Gisele Muller</a> on <span> Feb 09 ,2015 </span></p>
+									<p class="beaut-link1">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage. </p>
+									<a href="#" class="button">read more</a>
+								<div class="beaut-bottoms">
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 9752</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 125</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 103</p>
+									</div>
+									<div class="col-md-3 beaut-grid">
+										<p><span class="glyphicon glyphicon-download" aria-hidden="true"></span> 95</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					-->
+					<div class="clearfix"></div>
+					
+					<div class="news-grids">
+						<div class="col-md-6 new-grid">
+							<div class="beautiful">
+							<div class="news">
+								<div class="new1">
+									<h4>Podcasts</h4>
+								</div>
+								<div class="new2">
+									<a href="#">view all</a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="new-bottom">
+								<div class="new-bottom1">
+									<img src="images/n3.png" class="img-responsive" alt="">
+								</div>
+								<div class="new-bottom2">
+									<h5>nth cast</h5>
+									<p><a href="http://nthcast.com/fear">http://nthcast.com/fear</a></p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="new-bottom new3">
+								<div class="new-bottom1">
+									<img src="images/n2.png" class="img-responsive" alt="">
+								</div>
+								<div class="new-bottom2">
+									<h5>Red Beard podcast</h5>
+									<p><a href="http://www.RedBeardPodcast.com">http://www.RedBeardPodcast.com</a></p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="new-bottom">
+								<div class="new-bottom1">
+									<img src="images/n3.png" class="img-responsive" alt="">
+								</div>
+								<div class="new-bottom2">
+									<h5>Down And Nerdy podcast</h5>
+									<p><a href="http://www.downandnerdypodcast.com">http://www.downandnerdypodcast.com</a></p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							</div>
+						</div>
+						
+
+						<div class="col-md-6 new-grid1">
+							<div class="beautiful">
+							<div class="news">
+								<div class="new1">
+									<h4>Blogs</h4>
+								</div>
+								<div class="new2">
+									<a href="#">view all</a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="new-bottom">
+								<div class="new-bottom1">
+									<img src="images/n3.png" class="img-responsive" alt="">
+								</div>
+								<div class="new-bottom2">
+									<h5>forever geek</h5>
+									<p><a href="http://www.forevergeek.com">http://www.forevergeek.com</a></p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="new-bottom new3">
+								<div class="new-bottom1">
+									<img src="images/n2.png" class="img-responsive" alt="">
+								</div>
+								<div class="new-bottom2">
+									<h5>think geek</h5>
+									<p><a href="https://www.thinkgeek.com/blog/">https://www.thinkgeek.com/blog/</a></p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="new-bottom">
+								<div class="new-bottom1">
+									<img src="images/n3.png" class="img-responsive" alt="">
+								</div>
+								<div class="new-bottom2">
+									<h5>geek and nerd culture</h5>
+									<p><a href="http://www.geekandnerdculture.com/">http://www.geekandnerdculture.com/</a></p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							</div>
+						</div>
+						
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="clearfix"></div>
+					
+					<div class="feed-grids">
+					    <div class="col-md-6 new-grid">
+					        <div class="beautiful">
+								<div class="news">
+									<div class="new1">
+										<h4>Forbidden Planet Signings</h4>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+									<!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://feeds.feedburner.com/fplatestevents.xml",rssmikle_frame_width: "400",rssmikle_frame_height: "500",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "5",mcspeed: "20",sort: "Off",rssmikle_title: "off",rssmikle_title_sentence: "Forbidden Planet Events",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#2ECC71",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M %p",item_description_style: "text",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:500px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!--  end  feedwind code -->
+							</div>
+					    </div>
+					
+					    <div class="col-md-6 new-grid1">
+					        <div class="beautiful">
+								<div class="news">
+									<div class="new1">
+										<h4>Forbidden Planet Log</h4>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+									<!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://feeds.feedburner.com/fplatestlogentries.xml",rssmikle_frame_width: "400",rssmikle_frame_height: "500",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "5",mcspeed: "20",sort: "Off",rssmikle_title: "off",rssmikle_title_sentence: "Forbidden Planet Events",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#2ECC71",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M %p",item_description_style: "text",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:500px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div><!--  end  feedwind code -->
+							</div>
+					    </div>
+					</div>
+					
+					<div class="clearfix"></div>
+					
+					<div class="main-bottoms">
+						<!--<div class="col-md-4 main-bottom">
+							<div class="main-top">
+								<div class="main1">
+									<h4>friends</h4>
+								</div>
+								<div class="main2">
+									<p>8</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="main-tops">
+							<div class="main-top1">
+								<div class="col-md-3 main-top2">
+									<a href="#"><img src="images/i.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i1.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i2.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="main-top1 top33">
+								<div class="col-md-3 main-top2">
+									<a href="#"><img src="images/i1.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i2.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i1.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="main-top1">
+								<div class="col-md-3 main-top2">
+									<a href="#"><img src="images/i2.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i1.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="col-md-3 main-top2">
+								<a href="#"><img src="images/i.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							</div>
+						</div>-->
+						
+						<!--
+						<div class="col-md-4 main-bottom">
+						<div class="main-top">
+								<div class="main1">
+									<h4>tags cloud</h4>
+								</div>
+								<div class="main3">
+									<a href="#">view all</a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="main-maddile">
+							<ul>
+								<li><a href="#">morbi lacinia</a></li>
+								<li><a href="#">pellentesque</a></li>
+								<li><a href="#">vivamus</a></li>
+								<li><a href="#"> aliqum neque</a></li>
+								<li><a href="#">lacus</a></li>
+								<li><a href="#">morbi lacinia</a></li>
+								<li><a href="#">pellentesque</a></li>
+								<li><a href="#">aliqum neque</a></li>
+								<li><a href="#">lacus</a></li>
+								<li><a href="#">vivamus</a></li>
+								<li><a href="#">aliqum neque</a></li>
+								<li><a href="#">vivamus</a></li>
+								<li><a href="#">morbi lacinia</a></li>
+								<li><a href="#">pellentesque</a></li>
+							</ul>
+						</div>
+						</div>
+						<div class="col-md-4 main-bottom">
+						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+						<ul id="myTab" class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Web Design</a></li>
+							<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Ui Design</a></li>
+							<li role="presentation"><a href="#user" role="tab" id="user-tab" data-toggle="tab" aria-controls="user">Print Design</a></li>
+						</ul>
+						<div id="myTabContent" class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+								<p class="tab1">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor</p>
+								<p class="tab2">williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid.</p>
+								<a href="#" class="but">This is a tooltip</a>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+								<p class="tab1">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.qui irure terry richardson ex squid.loko farm-to-table craft beer twee.</p>
+							<p class="tab2">Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.loko farm-to-table craft beerex squid.</p>
+							<a href="#" class="but">This is a tooltip</a>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="user" aria-labelledby="user-tab">
+								<p class="tab1">williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid.</p>
+								<p class="tab2">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.loko farm-to-table craft beer twee.loko farm-to-table craft beer twee.</p>
+								<a href="#" class="but">This is a tooltip</a>
+							</div>
+						</div>
+					</div>
+					-->
+
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!--copy-->
+					<div class="copy-section">
+						
+							<p>&copy; 2016 Geek Genre. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+						
+					</div>
+				<!--copy-->
+
+				</div>
+			</div>
+		<!---content--->
+</body>
+</html>
