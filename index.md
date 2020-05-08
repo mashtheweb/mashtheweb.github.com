@@ -7,7 +7,7 @@ tagline: Web Blog of Mashups!
 
 Welcome to my simple web blog constructed by Github. So far, it will only some sample posts.
 
-## Some sample hack day stuff I have done this year
+## Some stuff I have done this year
 
 <p>
 Cultivate London (to be continued) See http://cultivatelondongfn.tumblr.com
