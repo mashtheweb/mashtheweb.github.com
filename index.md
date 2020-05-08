@@ -17,7 +17,7 @@ Great War Essex. See <a href="http://mashtheweb.github.io/greatwaressex.html">he
 </p>
 ## Some Posts
 
-This blog contains some posts as a starter for some blog data.
+This blog contains some posts as starters!
 
 Here's the sample "posts".
 
