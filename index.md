@@ -13,9 +13,6 @@ Welcome to my simple web blog constructed by Github. So far, it will only some s
 Cultivate London (to be continued) See http://cultivatelondongfn.tumblr.com
 </p>
 <p>
-eBay Hack Day (to be continued)
-</p>
-<p>
 Great War Essex. See <a href="mashtheweb.github.io/greatwaressex.html">here</a>
 </p>
 ## Some Posts
