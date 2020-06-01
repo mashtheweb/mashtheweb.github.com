@@ -5,7 +5,7 @@ tagline: Web Blog of Mashups!
 ---
 {% include JB/setup %}
 
-Welcome to my web blog constructed by Github. So far, it will only some posts.
+Welcome to my web blog constructed by Github. So far, it will include psots from 2020!
 
 ## Some stuff I have done in 2020
 
