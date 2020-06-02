@@ -5,12 +5,16 @@ tagline: Web Blog of Mashups!
 ---
 {% include JB/setup %}
 
-Welcome to my web blog constructed by Github. So far, it will include psots from 2020!
+Welcome to my web blog constructed by Github. So far, it will include posts from 2020!
 
 ## Some stuff I have done in 2020
 
 <p>
 Mash The Music See <a href="http://mashthemusic.github.io/">here</a>
+</p>
+
+<p>
+Personal Diary See <a href="http://fametheweb.wordpress.com/">here</a>
 </p>
 
 ## Some stuff I have done in 2016
