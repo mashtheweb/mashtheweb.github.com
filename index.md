@@ -14,6 +14,10 @@ Mash The Music See <a href="http://mashthemusic.github.io/">here</a>
 </p>
 
 <p>
+Mash The Music Blog See <a href="http://mashtheweb.wordpress.com/">here</a>
+</p>
+
+<p>
 Personal Diary See <a href="http://fametheweb.wordpress.com/">here</a>
 </p>
 
