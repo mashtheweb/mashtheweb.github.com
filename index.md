@@ -10,15 +10,11 @@ Welcome to my web blog constructed by Github. So far, it will include posts from
 ## Some stuff I have done in 2020
 
 <p>
-Mash The Music See <a href="http://mashthemusic.github.io/">here</a>
+Mash The Music Blog See <a href="http://mashthemusic.github.io/">here</a>
 </p>
 
 <p>
 Mash The Music Blog See <a href="http://mashtheweb.wordpress.com/">here</a>
-</p>
-
-<p>
-Personal Diary See <a href="http://fametheweb.wordpress.com/">here</a>
 </p>
 
 ## Some websites I have done in 2020
