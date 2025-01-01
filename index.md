@@ -5,7 +5,13 @@ tagline: Web Blog of Mashups!
 ---
 {% include JB/setup %}
 
-Welcome to my web blog constructed by Github. So far, it will include posts from 2020!
+Welcome to my web blog constructed by Github. So far, it will include posts from 2020 to now!
+
+## Some stuff I have done in 2023
+
+<p>
+Mash The Web .NET Blog Website <a href="https://mashtheweb.azurewebsites.net/">here</a>
+</p>
 
 ## Some stuff I have done in 2020
 
