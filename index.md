@@ -23,6 +23,11 @@ Mash The Music Blog See <a href="http://mashthemusic.github.io/">here</a>
 Mash The Music Blog See <a href="http://mashtheweb.wordpress.com/">here</a>
 </p>
 
+<p>
+  Affiliates BMA Website on
+  <a href="https://affiliate.bma.org.uk">here</a>
+</p>
+
 ## Some websites I have done in 2020
 
 <p>
