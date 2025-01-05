@@ -45,7 +45,7 @@ Great War Essex. See <a href="http://mashtheweb.github.io/greatwaressex.html">he
 
 ## Some Posts
 
-This blog contains some posts!
+This blog contains some posts.
 
 Here's the "posts".
 
