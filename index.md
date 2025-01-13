@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Welcome to Mash The Web!
-tagline: Web Blog of Mashups!
+tagline: Web Blogs of Mashups!
 ---
 {% include JB/setup %}
 
