@@ -7,13 +7,13 @@ tagline: Web Blogs of Mashups!
 
 Welcome to my web blog constructed by Github. It contains a list of website links. So far, it will include posts from 2020 to now (in 2025)!
 
-## Some stuff I have done in 2023
+## Some web stuff I have done in 2023
 
 <p>
 Mash The Web .NET Blog Website <a href="https://mashtheweb.azurewebsites.net/">here</a>
 </p>
 
-## Some stuff I have done in 2020
+## Some web stuff I have done in 2020
 
 <p>
 Mash The Music Blog See <a href="http://mashthemusic.github.io/">here</a>
